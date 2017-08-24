@@ -22,7 +22,7 @@ public class merge_sort{
 	}
 
 	public static ArrayList<Integer> divide(ArrayList<Integer> input) {
-		// if list has one element stop
+		// If list has one element stop
 		if (input.size() <= 1) {
 			return input;
 		}
@@ -30,7 +30,7 @@ public class merge_sort{
  		ArrayList<Integer> left = new ArrayList<Integer>();
 		ArrayList<Integer> right = new ArrayList<Integer>();
  
-		//divide list into left and right sides
+		// Divide list into left and right sides
 		for (int i = 0; i < input.size() ; i++) {
  			if (i < input.size()/2) {
 				left.add(input.get(i));
@@ -52,7 +52,7 @@ public class merge_sort{
 	public static ArrayList<Integer> merge(ArrayList<Integer> left, ArrayList<Integer> right) {
 		ArrayList<Integer> sorted = new ArrayList<Integer>();
 		
-		// compare elements and add smalles to sorted array
+		// Compare elements and add smalles to sorted array
 		while((left.size() != 0) && (right.size() != 0)) {
 			if(left.get(0) < right.get(0)) {
 				sorted.add(left.get(0));
@@ -63,7 +63,7 @@ public class merge_sort{
 			}			
 		}
 		
-		// add unadded elements if one list runs out of elements before the other list does
+		// Add unadded elements if one list runs out of elements before the other list does
 		while (left.size() != 0) {
 			sorted.add(left.get(0));
 			left.remove(0);
@@ -73,7 +73,7 @@ public class merge_sort{
 			right.remove(0);
 		}
 		
-		// return sorted list
+		// Return sorted list
 		return sorted;
 	}
 

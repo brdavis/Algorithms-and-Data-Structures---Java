@@ -14,7 +14,7 @@ This Github repository acts primarily as a sandbox to hold all of my files perta
 * Linear Search
 * Binary Search
 
-** Sorting**
+**Sorting**
 * Selection Sort
 * Bubble Sort
 * Merge Sort

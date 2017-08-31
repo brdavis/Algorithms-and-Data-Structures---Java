@@ -14,15 +14,24 @@ public class linear_search {
 		System.out.println("Please enter the number you wish to find in the list");
 		int target = sc.nextInt();
 
-		// Perform linear search on list
+		// Perform linear search on list and print result
+		int index = search(list, target);
+
+		if (index >=0 ) {
+			System.out.println("The number you requested, " + target + ", was found " +
+					   "at the " + (index + 1 ) + " spot in the list.");
+		} else {
+			System.out.println("The number you requested could not be found in the list.");
+		}
+	}
+
+	public static int search(ArrayList<Integer> list, int target) {
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i) == target) {
-				System.out.println( "The number you requested, " + target + ", was found " +
-						    "at spot " + (i + 1) + " in the list.");
-				return;	
+				return i;
 			}
 		}
-		System.out.println("The number you requested could not be found in the list.");
+		return -1;
 	}
 	
 }

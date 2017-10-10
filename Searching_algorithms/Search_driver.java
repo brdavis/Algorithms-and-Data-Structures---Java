@@ -23,15 +23,23 @@ import java.util.Arrays;
 		System.out.println("Enter the number you wish to find");
 		target = s.nextInt();
   
- 		// Perform binary search and print results
+ 		// Perform linear and binary searches and print results
  
                 // Start with a sorted list
                 Arrays.sort(list);
- 		// Run search
+
+		// run linear search
+		int index_of_target = search.linear_search(list, target);
+
+		System.out.println("Linear search:");
+		print_result(index_of_target);
+
+ 		// Run binary search
 		int left_index = 0;
 		int right_index = list.length - 1; //adjust for zero-based array indexing
-		int index_of_target= binary.binary_search(list, left_index, right_index, target);
- 
+		index_of_target= search.binary_search(list, left_index, right_index, target);
+ 		
+		System.out.println("Binary search:");
 		print_result(index_of_target);
 	}
 
